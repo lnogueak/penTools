@@ -1,2 +1,2 @@
-# penTools
+# PenTools
 Penetration testing tools for Debian
