@@ -32,8 +32,8 @@ install_debian_tools() {
 prompt_install "debian tools" install_debian_tools
 
 install_git_repos() {
-	git clone https://github.com/rebootuser/LinEnum.git ./LinEnum
-	git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git ./PEASS
+	git clone https://github.com/rebootuser/LinEnum.git ./enum/LinEnum
+	git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git ./enum/PEASS
 }
 prompt_install "git repos" install_git_repos
 
