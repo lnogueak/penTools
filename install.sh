@@ -34,6 +34,7 @@ prompt_install "debian tools" install_debian_tools
 install_git_repos() {
 	git clone https://github.com/rebootuser/LinEnum.git ./enum/LinEnum
 	git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git ./enum/PEASS
+	git clone https://github.com/pentestmonkey/php-reverse-shell.git ./templates/php-reverse-shell
 }
 prompt_install "git repos" install_git_repos
 
@@ -42,6 +43,7 @@ install_ffuf() {
 	mkdir ffuf 
 	tar -xzf ffuf_1.0.2_linux_amd64.tar.gz -C ffuf
 	rm ffuf_1.0.2_linux_amd64.tar.gz
+	mv ffuf enum/ffuf
 }
 prompt_install "ffuf" install_ffuf
 
