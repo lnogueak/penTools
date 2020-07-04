@@ -23,7 +23,7 @@ prompt_install() {
 }
 
 install_debian_tools() {
-	sudo apt install -y php golang
+	sudo apt install -y php golang python-pip python3-pip
 	sudo apt install -y ufw net-tools gobuster
 	sudo apt install -y strace ltrace
 	sudo apt install -y steghide
