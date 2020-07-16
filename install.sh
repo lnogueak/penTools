@@ -35,6 +35,7 @@ install_git_repos() {
 	git clone https://github.com/rebootuser/LinEnum.git ./enum/LinEnum
 	git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git ./enum/PEASS
 	git clone https://github.com/pentestmonkey/php-reverse-shell.git ./templates/php-reverse-shell
+	git clone https://github.com/danielmiessler/SecLists.git
 	
 	#JohnTheRipper
 	git clone https://github.com/magnumripper/JohnTheRipper.git
