@@ -8,7 +8,7 @@ echo "
 ██║░░░░░███████╗██║░╚███║░░░██║░░░╚█████╔╝╚█████╔╝███████╗██████╔╝
 ╚═╝░░░░░╚══════╝╚═╝░░╚══╝░░░╚═╝░░░░╚════╝░░╚════╝░╚══════╝╚═════╝░
 
-Penetration testing tools for Debian [by Sm4rtK1dz]
+Penetration testing tools installer for Debian [by Sm4rtK1dz]
 "
 
 prompt_install() {
@@ -29,8 +29,6 @@ install_debian_tools() {
 	sudo apt install -y ufw net-tools gobuster
 	# Analytic Tools
 	sudo apt install -y strace ltrace steghide
-	# Final Autoremove
-	sudo apt autoremove -y
 }
 prompt_install "debian tools" install_debian_tools
 
@@ -42,7 +40,7 @@ prompt_install "debian addons" install_debian_addons
 install_git_repos() {
 	git clone https://github.com/rebootuser/LinEnum.git ./enum/LinEnum
 	git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git ./enum/PEASS
-	git clone https://github.com/pentestmonkey/php-reverse-shell.git ./templates/php-reverse-shell
+	git clone https://github.com/pentestmonkey/php-reverse-shell.git ./shell/php-reverse-shell
 	git clone https://github.com/danielmiessler/SecLists.git
 }
 prompt_install "git repos" install_git_repos
@@ -56,4 +54,5 @@ install_ffuf() {
 }
 prompt_install "ffuf" install_ffuf
 
+sudo apt autoremove -y
 exit 1
