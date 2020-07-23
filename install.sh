@@ -23,22 +23,27 @@ prompt_install() {
 }
 
 install_debian_tools() {
+	# Programming Languages
 	sudo apt install -y php golang python-pip python3-pip
+	# Administration Tools
 	sudo apt install -y ufw net-tools gobuster
-	sudo apt install -y strace ltrace
-	sudo apt install -y steghide
+	# Analytic Tools
+	sudo apt install -y strace ltrace steghide
+	# Final Autoremove
 	sudo apt autoremove -y
 }
 prompt_install "debian tools" install_debian_tools
+
+install_debian_addons() {
+	sudo apt-get install -y lxappearance i3
+}
+prompt_install "debian addons" install_debian_addons
 
 install_git_repos() {
 	git clone https://github.com/rebootuser/LinEnum.git ./enum/LinEnum
 	git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git ./enum/PEASS
 	git clone https://github.com/pentestmonkey/php-reverse-shell.git ./templates/php-reverse-shell
 	git clone https://github.com/danielmiessler/SecLists.git
-	
-	#JohnTheRipper
-	git clone https://github.com/magnumripper/JohnTheRipper.git
 }
 prompt_install "git repos" install_git_repos
 
