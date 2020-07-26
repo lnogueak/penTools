@@ -26,9 +26,9 @@ install_debian_tools() {
 	# Programming Languages
 	sudo apt install -y php golang python-pip python3-pip
 	# Administration Tools
-	sudo apt install -y ufw net-tools gobuster
+	sudo apt install -y ufw net-tool
 	# Analytic Tools
-	sudo apt install -y strace ltrace steghide
+	sudo apt install -y strace ltrace gobuster feh gedit steghide
 }
 prompt_install "debian tools" install_debian_tools
 
@@ -42,6 +42,10 @@ install_git_repos() {
 	git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git ./enum/PEASS
 	git clone https://github.com/pentestmonkey/php-reverse-shell.git ./shell/php-reverse-shell
 	git clone https://github.com/danielmiessler/SecLists.git ./wordlists/SecLists
+	git clone https://github.com/Anon-Exploiter/SUID3NUM ./enum/SUID3NUM
+
+	wget -P ./enum https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy64
+	wget -P ./enum https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy32
 }
 prompt_install "git repos" install_git_repos
 

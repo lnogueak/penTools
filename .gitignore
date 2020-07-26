@@ -10,3 +10,5 @@ composer.phar
 /enum/PEASS/
 /enum/LinEnum/
 /enum/ffuf/
+/enum/SUID3NUM/
+/enum/pspy*
