@@ -23,12 +23,14 @@ prompt_install() {
 }
 
 install_debian_tools() {
+	sudo apt update
 	# Programming Languages
 	sudo apt install -y php golang python-pip python3-pip
 	# Administration Tools
-	sudo apt install -y ufw net-tool
+	sudo apt install -y ufw net-tools
 	# Analytic Tools
-	sudo apt install -y strace ltrace gobuster feh gedit steghide
+	sudo apt install -y strace ltrace gobuster feh gedit steghide \
+		snmp-mibs-downloader
 }
 prompt_install "debian tools" install_debian_tools
 
