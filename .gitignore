@@ -12,3 +12,5 @@ composer.phar
 /enum/ffuf/
 /enum/SUID3NUM/
 /enum/pspy*
+/enum/Enyx
+/enum/ipv6Enyx

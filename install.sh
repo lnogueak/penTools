@@ -29,8 +29,7 @@ install_debian_tools() {
 	# Administration Tools
 	sudo apt install -y ufw net-tools
 	# Analytic Tools
-	sudo apt install -y strace ltrace gobuster feh gedit steghide \
-		snmp-mibs-downloader
+	sudo apt install -y strace ltrace gobuster feh gedit steghide checksec
 }
 prompt_install "debian tools" install_debian_tools
 
@@ -45,6 +44,7 @@ install_git_repos() {
 	git clone https://github.com/pentestmonkey/php-reverse-shell.git ./shell/php-reverse-shell
 	git clone https://github.com/danielmiessler/SecLists.git ./wordlists/SecLists
 	git clone https://github.com/Anon-Exploiter/SUID3NUM ./enum/SUID3NUM
+	git clone https://github.com/trickster0/Enyx.git ./enum/ipv6Enyx
 
 	wget -P ./enum https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy64
 	wget -P ./enum https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy32
