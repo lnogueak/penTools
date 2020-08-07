@@ -27,7 +27,7 @@ install_debian_tools() {
 	# Programming Languages
 	sudo apt install -y php golang python-pip python3-pip
 	# Administration Tools
-	sudo apt install -y ufw net-tools
+	sudo apt install -y ufw net-tools ncat
 	# Analytic Tools
 	sudo apt install -y strace ltrace gobuster feh gedit steghide checksec
 }
