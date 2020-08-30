@@ -2,15 +2,7 @@ composer.phar
 /vendor/
 .DS_Store
 
-# Commit your application's lock file https://getcomposer.org/doc/01-basic-usage.md#commit-your-composer-lock-file-to-version-control
-# composer.lock
-/wordlists/SecLists/
-/SecLists/
-/shell/php-reverse-shell/
-/enum/PEASS/
-/enum/LinEnum/
-/enum/ffuf/
-/enum/SUID3NUM/
-/enum/pspy*
-/enum/Enyx
-/enum/ipv6Enyx
+/enum/
+/wordlists/
+/shell/
+/experimental/
