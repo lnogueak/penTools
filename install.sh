@@ -68,7 +68,6 @@ do
 	d) install_debian;;
 	g) install_git;;
 	e) install_experimental;;
-	*) help_menu;;
 	esac
 done
 
